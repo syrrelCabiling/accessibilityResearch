@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>ChitChat</title>
+	<title>Accessible Media Player</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://unpkg.com/vue"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,9 +13,46 @@
 </head>
 
 <body>
-	
+		
+    <!--Video section-->
+<div class="container">
+	<div class="row mx-auto text-center"  id="about">
+		<div class="col-lg-12 col-md-8 col-sm-12">
+			<h2>Roku Movie Stream</h2>
+				  <div id="videoPanel">
+				   <video id="brandVideo" width="100%" poster="images/video-placeholder.png"> 
+					   <source src="images/films/rear_window.mp4" type="video/mp4">
+					   <source src="video/render.ogg" type="video/ogg">
+						 <source src="video/render.webm" type="video/webm">
+						Your browser is outdated!
+				   </video>
+				   </div>
+					   
+						
+				<!--control-->
+				<div id="video_controls_bar">
+				  <button id="playpausebtn" class="bttns">
+					<img src="images/Play.png" id="playBtn" onclick="(this,'myVideo')">
+				  </button>
+				  <input id="seekslider" type="range" min="0" max="100" value="0" step="1" class="bttns">
+				  <span id="curtimetext" class="bttns">00:00</span> / <span id="durtimetext" class="bttns">02:38</span>
+				  <button id="mutebtn" class="bttns">
+					  <img src="images/Speaker.png" id="speaker" onclick="(this,'myVideo')">
+				  </button>
+				  <button id="fullscreenbtn" class="bttns">
+					<img src="images/Fullscreen.png" id="fullScreen">
+				  </button>
+				</div>
+				
+			  </div>
+			  </div>
+			  <!--Video ends-->
+		</div>
+	</div>
+</div>
 
-	<script type="module" src="js/emoji.js"></script>
+
+	<script type="text/javascript" src="js/vcustom_player.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
