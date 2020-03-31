@@ -1,5 +1,5 @@
-# ChitChat - Chat with friends!
-A chatapp made with Express, Node.js,nSocket.io, and Vue
+# Accesibility Research For Audio and Video Players
+Basic Interface with multimedia controls to ensure that it is accessible for everybody
 
 by Syrrel Cabiling
 
