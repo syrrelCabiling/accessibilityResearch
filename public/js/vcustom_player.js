@@ -24,6 +24,29 @@ function initializePlayer() {
 
 }
 
+//Transcript
+var dialogueTimings = [0,3,7,12,26,33,37,45,50,61,66,74,79,84,93,100,103,108,112,116],
+        dialogues = document.querySelectorAll('#transcript>li'),
+        transcriptWrapper = document.querySelector('#transcriptWrapper'),
+
+        previousDialogueTime = -1;   
+
+     function playTranscript() {
+
+        var currentDialogueTime = Math.max.apply(Math, dialogueTimings.filter(function(v){return v <= vid.currentTime}));
+
+        if(previousDialogueTime !== currentDialogueTime) {
+            previousDialogueTime = currentDialogueTime;
+            var currentDialogue = dialogues[dialogueTimings.indexOf(currentDialogueTime)];
+            transcriptWrapper.scrollTop  = currentDialogue.offsetTop - 50;  
+            var previousDialogue = document.getElementsByClassName('speaking')[0];
+            if(previousDialogue !== undefined)
+                previousDialogue.className = previousDialogue.className.replace('speaking','');
+            currentDialogue.className +=' speaking';
+        }
+    }
+;
+
 
 window.onload = initializePlayer;
 
