@@ -1,5 +1,5 @@
 //variables
-var vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, fullscreenbtn;
+var m_vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, fullscreenbtn;
 function initializePlayer() {
     vid = document.getElementById("brandVideo");
     playbtn = document.getElementById("playpausebtn");//Play Button
@@ -54,6 +54,7 @@ window.onload = initializePlayer;
 function playPause() {
   if (vid.paused == true) {
     vid.play();
+    console.log('play');
     document.getElementById("playBtn").src = "images/Pause.png";
   } else {
   vid.pause();

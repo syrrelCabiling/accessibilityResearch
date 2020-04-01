@@ -12,6 +12,7 @@
 </head>
 
 <body>
+	<!--Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
 		<a class="navbar-brand mr-5" href="#">Roku Stream - Beta</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +37,7 @@
 
 
 
-    <!--Video section-->
+<!--Movie section-->
 <div class="container">
 	<div class="row mx-auto text-center"  id="about">
 		<div class="col-lg-8 col-md-8 col-sm-12">
@@ -44,15 +45,15 @@
 				  <div id="videoPanel">
 				   <video id="brandVideo" ontimeupdate="playTranscript()"  width="100%" poster="images/video-placeholder.png" crossorigin="anonymous"> 
 					   <source src="images/films/rear_window.mp4" type="video/mp4">
-					   <source src="video/render.ogg" type="video/ogg">
-						 <source src="video/render.webm" type="video/webm" >
+					   <source src="images/films/rear_window.ogg" type="video/ogg">
+						 <source src="images/films/rear_window.webm" type="video/webm" >
 						<track label="English" kind="subtitles" srclang="en" src="/images/films/rear_window.vtt" default id="subs">
 						Sorry. Your browser does not support this video
 				   </video>
 				   </div>
 					   
 						
-				<!--control-->
+				<!--Movie controls-->
 				<div id="video_controls_bar">
 				  <button id="playpausebtn" class="bttns">
 					<img src="images/Play.png" id="playBtn" onclick="(this,'myVideo')" alt="Play Button">
@@ -109,7 +110,7 @@
 			  </div>
 			  <!--Video ends-->
 			
-			  <!--Video Description-->
+			  <!--Movie Description-->
 			  <div class="container">
 				  <div class="row mt-5">
 					  <div class="col-lg-12">
@@ -135,8 +136,66 @@
 </div>
 
 
+<!--TV Show section-->
+<div class="container mt-5" id="tvshows">
+	<div class="row mt-5">
+		<div class="col">
+			<h2>Roku TV Show Stream</h2>
+			<figure id="video_player">
+				<video id="tv_brandVideo"  poster="images/sc_cover1.jpeg">
+					<source src="images/films/key_ep.mp4" type="video/mp4">
+					<source src="images/films/key_ep.webm" type="video/webm">
+				</video>
+				<figcaption>
+					<a href="images/films/key_ep.mp4"><img src="images/sc_cover1.jpeg" alt="Nambia Timelapse 1"></a>
+					<a href="images/films/wonderland_ep.mp4"><img src="images/sc_cover2.jpeg" alt="Nambia Timelapse 2"></a>
+				</figcaption>
+			</figure>
+
+
+			<!--TV Show controls only-->
+			<div id="tv_video_controls_bar">
+				<button id="tv_playpausebtn" class="bttns">
+					<img src="images/tv_Play.png" id="tv_playBtn" onclick="(this,'myVideo')" alt="Play Button">
+				</button>
+					<input id="tv_seekslider" type="range" min="0" max="100" value="0" step="1" class="bttns">
+					<span id="tv_curtimetext" class="bttns">00:00</span> / <span id="tv_durtimetext" class="bttns">02:38</span>
+				<button id="tv_mutebtn" class="bttns">
+					<img src="images/tv_Speaker.png" id="tv_speaker" onclick="(this,'myVideo')" alt="Volume Max Button">
+				</button>
+				<button id="tv_fullscreenbtn" class="bttns">
+					<img src="images/tv_Fullscreen.png" id="fullScreen" alt="Fullscreen Button">
+				</button>
+				<button id="tv_togglecc">Subtitles: on</button>
+					<div class="mt-3 text-center">
+						<h6>Press:</h6>
+						<span>Spacebar = Play</span>
+						<p>F = Fullscreen</p>
+					</div>
+			</div>
+
+
+
+			<h5>Scooby Doo</h5>
+						  Select Reader:<select name="" id="voiceList"></select>
+						  <button id="speak">
+							Read
+						  </button>
+						  <h6>Synopsis:</h6>
+						  
+						  <div  id="readDesc">
+
+							<p>Brainiac Velma, jock Fred, fashionista Daphne, hippie Shaggy, and Shaggy's highstrung, talking Great Dane, Scooby-Doo, climb into their green van, the Mystery Machine, and hit the road in search of weird phenomena to solve.</p>
+
+						  </div>
+				
+		</div>
+	</div>
+</div>
+
 	<script type="text/javascript" src="js/vcustom_player.js"></script>
 	<script type="text/javascript" src="js/text-to-speech.js"></script>
+	<script type="text/javascript" src="js/tv_show.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
