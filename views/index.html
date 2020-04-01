@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Accessible Media Player</title>
+	<title>Roku Stream - Beta</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
@@ -12,19 +12,42 @@
 </head>
 
 <body>
-		
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+		<a class="navbar-brand mr-5" href="#">Roku Stream - Beta</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Movies <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#tvshows">TV Shows</a>
+			  </li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Audios</a>
+			</li>
+			
+		  </ul>
+		</div>
+	  </nav>	
+
+
+
     <!--Video section-->
 <div class="container">
 	<div class="row mx-auto text-center"  id="about">
 		<div class="col-lg-8 col-md-8 col-sm-12">
 			<h2>Roku Movie Stream</h2>
 				  <div id="videoPanel">
-				   <video id="brandVideo" width="100%" poster="images/video-placeholder.png" crossorigin="anonymous"> 
+				   <video id="brandVideo" ontimeupdate="playTranscript()"  width="100%" poster="images/video-placeholder.png" crossorigin="anonymous"> 
 					   <source src="images/films/rear_window.mp4" type="video/mp4">
 					   <source src="video/render.ogg" type="video/ogg">
 						 <source src="video/render.webm" type="video/webm" >
 						<track label="English" kind="subtitles" srclang="en" src="/images/films/rear_window.vtt" default id="subs">
-						Your browser is outdated!
+						Sorry. Your browser does not support this video
 				   </video>
 				   </div>
 					   
@@ -32,47 +55,88 @@
 				<!--control-->
 				<div id="video_controls_bar">
 				  <button id="playpausebtn" class="bttns">
-					<img src="images/Play.png" id="playBtn" onclick="(this,'myVideo')">
+					<img src="images/Play.png" id="playBtn" onclick="(this,'myVideo')" alt="Play Button">
 				  </button>
 				  <input id="seekslider" type="range" min="0" max="100" value="0" step="1" class="bttns">
 				  <span id="curtimetext" class="bttns">00:00</span> / <span id="durtimetext" class="bttns">02:38</span>
 				  <button id="mutebtn" class="bttns">
-					  <img src="images/Speaker.png" id="speaker" onclick="(this,'myVideo')">
+					  <img src="images/Speaker.png" id="speaker" onclick="(this,'myVideo')" alt="Volume Max Button">
 				  </button>
 				  <button id="fullscreenbtn" class="bttns">
-					<img src="images/Fullscreen.png" id="fullScreen">
+					<img src="images/Fullscreen.png" id="fullScreen" alt="Fullscreen Button">
 				  </button>
 				  <button id="togglecc">Subtitles: on</button>
+				  <div class="mt-3 text-center">
+					<h6>Press:</h6>
+					<span>Spacebar = Play</span>
+					<p>F = Fullscreen</p>
+				  </div>
 				</div>
 				
 			  </div>
+
 			  <div class="col-lg-4">
-				  
 				<div class="transcriptArea">
-					<h5>Interactive Transcript</h5>
+
+					<div id="transcriptWrapper">
+						<h5>Live Transcript</h5>
+						<ul id="transcript">
+						  	<li class="speaker1"> This is the scene of a crime.</li>
+							<li class="speaker1">A crime of passion filmed in a way you have never seen before </li>
+							<li class="speaker1">and there’s no one else would dare attempt but the Screams Master of Suspense, </li>
+							<li class="speaker1">The Producer Director who shocked the world with Psycho.</li>
+						  	<li class="speaker1">This is the apartment of a man named Jeffries, a news photographer who’s beat used to be the world.</li>
+							<li class="speaker1">Right now, his world has shrunk down to the size of this window.</li>
+							<li class="speaker1">He's been watching the people across the way nobody seems to pull their blinds during a hot spell like this. </li>
+							<li class="speaker1">He knows a lot about them by now. Too much perhaps.</li>
+							<li class="speaker1">For instance down there on the second floor the woman pacing about he calls her miss lonely hearts, so lonely that even death seems like a friend.</li>
+						 	<li class="speaker1">These are the newlyweds on a honeymoon no one will ever forget. </li>
+							<li class="speaker1">He calls her miss hearing aid, an artist of a very odd and strange art.</li>
+							<li class="speaker1">The songwriter who plays the same melody over and over again</li> 
+							<li class="speaker1">A genius... or insane.</li>
+							<li class="speaker1">This is the traveling salesman and his invalued wife, out of their argument comes a weird kind of love.</li>
+							
+							<li class="speaker1">Miss Torso, the body beautiful, that is viewed from a safe distance.</li>
+							<li class="speaker1">Those are just a few of my neighbours.</li>
+							
+							<li class="speaker1">First I watch them just to kill time but then I couldn't take my eyes off em just as you wouldn't be able to,</li> 
+							<li class="speaker1">and you won't be able to take your eyes off the glowing beauty of Grace Kelly </li> 
+							<li class="speaker1">who shares the heart and curiosity of James Stewart.</li>
+							<li class="speaker1">in this story of a romance shadowed by the terror of a horrifying secret.</li>
+					</div>
 				</div>
 			</div>
 			  </div>
-
-			
 			  <!--Video ends-->
-
+			
 			  <!--Video Description-->
 			  <div class="container">
 				  <div class="row mt-5">
 					  <div class="col-lg-12">
+						 
 						  <h5>Rear Window (1954)</h5>
+						  Select Reader:<select name="" id="voiceList"></select>
+						  <button id="speak">
+							Read
+						  </button>
 						  <h6>Synopsis:</h6>
-						  <p>Professional photographer Jeff is stuck in his apartment, recuperating from a broken leg. Out of boredom, he begins to spy on his neighbours and comes across a shocking revelation.</p>
+						  
+						  <div  id="readDesc">
+
+							<p>Professional photographer Jeff is stuck in his apartment, recuperating from a broken leg. Out of boredom, he begins to spy on his neighbours and comes across a shocking revelation.</p>
+
+						  </div>
 					  </div>
 				  </div>
 			  </div>
 		</div>
+
 	</div>
 </div>
 
 
 	<script type="text/javascript" src="js/vcustom_player.js"></script>
+	<script type="text/javascript" src="js/text-to-speech.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
