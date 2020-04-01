@@ -19,7 +19,7 @@
 		<div class="col-lg-8 col-md-8 col-sm-12">
 			<h2>Roku Movie Stream</h2>
 				  <div id="videoPanel">
-				   <video id="brandVideo" width="100%" poster="images/video-placeholder.png" crossorigin="anonymous"> 
+				   <video id="brandVideo" ontimeupdate="playTranscript()"  width="100%" poster="images/video-placeholder.png" crossorigin="anonymous"> 
 					   <source src="images/films/rear_window.mp4" type="video/mp4">
 					   <source src="video/render.ogg" type="video/ogg">
 						 <source src="video/render.webm" type="video/webm" >
@@ -47,9 +47,34 @@
 				
 			  </div>
 			  <div class="col-lg-4">
-				  
 				<div class="transcriptArea">
-					<h5>Interactive Transcript</h5>
+
+					<div id="transcriptWrapper">
+						<h5>Live Transcript</h5>
+						<ul id="transcript">
+						  	<li class="speaker1"> This is the scene of a crime.</li>
+							<li class="speaker1">A crime of passion filmed in a way you have never seen before </li>
+							<li class="speaker1">and there’s no one else would dare attempt but the Screams Master of Suspense, </li>
+							<li class="speaker1">The Producer Director who shocked the world with Psycho.</li>
+						  	<li class="speaker1">This is the apartment of a man named Jeffries, a news photographer who’s beat used to be the world.</li>
+							<li class="speaker1">Right now, his world has shrunk down to the size of this window.</li>
+							<li class="speaker1">He's been watching the people across the way nobody seems to pull their blinds during a hot spell like this. </li>
+							<li class="speaker1">He knows a lot about them by now. Too much perhaps.</li>
+							<li class="speaker1">For instance down there on the second floor the woman pacing about he calls her miss lonely hearts, so lonely that even death seems like a friend.</li>
+						 	<li class="speaker1">These are the newlyweds on a honeymoon no one will ever forget. </li>
+							<li class="speaker1">He calls her miss hearing aid, an artist of a very odd and strange art.</li>
+							<li class="speaker1">The songwriter who plays the same melody over and over again</li> 
+							<li class="speaker1">A genius... or insane.</li>
+							<li class="speaker1">This is the traveling salesman and his invalued wife, out of their argument comes a weird kind of love.</li>
+							
+							<li class="speaker1">Miss Torso, the body beautiful, that is viewed from a safe distance.</li>
+							<li class="speaker1">Those are just a few of my neighbours.</li>
+							
+							<li class="speaker1">First I watch them just to kill time but then I couldn't take my eyes off em just as you wouldn't be able to,</li> 
+							<li class="speaker1">and you won't be able to take your eyes off the glowing beauty of Grace Kelly </li> 
+							<li class="speaker1">who shares the heart and curiosity of James Stewart.</li>
+							<li class="speaker1">in this story of a romance shadowed by the terror of a horrifying secret.</li>
+					</div>
 				</div>
 			</div>
 			  </div>

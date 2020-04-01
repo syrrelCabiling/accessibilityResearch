@@ -9,4 +9,27 @@ body {
 	border: 5px solid black;
 	height: 50vh;
 	margin-top: 20%;
+	overflow-y: scroll;
+}
+
+#transcript {
+    font-family: garamond;
+    font-size: 14pt;
+    list-style: none;
+    border-left: 1px solid;
+    padding-left: 13px;
+    position: relative;
+}
+#transcript > li {
+    margin: 5px 0;
+    padding: 5px;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    transition: all .8s ease;
+    list-style-type: disc;
+}
+.speaking {
+    -webkit-filter: blur(0px) !important;
+    filter: blur(0px) !important;
+    background-color: #FFFF00;
 }
