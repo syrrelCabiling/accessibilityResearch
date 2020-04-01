@@ -2,4 +2,9 @@ body {
   margin: 0 auto;
   background-color: #ccc; }
 
+.transcriptArea {
+  border: 5px solid black;
+  height: 50vh;
+  margin-top: 20%; }
+
 /*# sourceMappingURL=main.css.map */

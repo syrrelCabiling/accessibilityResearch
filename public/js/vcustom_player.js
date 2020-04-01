@@ -2,13 +2,13 @@
 var vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, fullscreenbtn;
 function initializePlayer() {
     vid = document.getElementById("brandVideo");
-    playbtn = document.getElementById("playpausebtn");
-    seekslider = document.getElementById("seekslider");
+    playbtn = document.getElementById("playpausebtn");//Play Button
+    seekslider = document.getElementById("seekslider");//Pause Button
     curtimetext = document.getElementById("curtimetext");
     durtimetext = document.getElementById("durtimetext");
-    mutebtn = document.getElementById("mutebtn");
-    fullscreenbtn = document.getElementById("fullscreenbtn");
-
+    mutebtn = document.getElementById("mutebtn");//Mute Button
+    fullscreenbtn = document.getElementById("fullscreenbtn");//Toggle Fullscreen
+    ccBtn = document.getElementById("togglecc");//Toggle Substitles on or off
 
 //event listeners
     playbtn.addEventListener("click",playPause,false);
@@ -16,9 +16,14 @@ function initializePlayer() {
     vid.addEventListener('timeupdate',seektimeupdate,false);
     mutebtn.addEventListener("click",vidMute,false);
     fullscreenbtn.addEventListener("click",toggleFullScreen,false);
-
+    ccBtn.addEventListener('click', function() {
+      var trackMode = vid.textTracks[0].mode;
+      vid.textTracks[0].mode = (trackMode == 'showing') ? 'disabled' : 'showing';
+      this.innerHTML = 'Subtitles: '.concat((trackMode == 'showing') ? 'off' : 'on');
+   });
 
 }
+
 
 window.onload = initializePlayer;
 
