@@ -12,9 +12,12 @@ function handler(e) {
 	video = document.querySelector("#video_player video");
 	video.removeAttribute("controls");
 	video.removeAttribute("poster");
-	source = document.querySelectorAll("#video_player video source");
+    source = document.querySelectorAll("#video_player video source");
+    track = document.querySelector("#video_player video track");
 	source[0].src = filename + ".mp4";
-	source[1].src = filename + ".webm";
+    source[1].src = filename + ".webm";
+    track.src = filename + ".vtt";
+    
 	video.load();
 	video.play();    
 }
@@ -35,7 +38,7 @@ function tv_initializePlayer() {
     tv_durtimetext = document.getElementById("tv_durtimetext");
     tv_mutebtn = document.getElementById("tv_mutebtn");//Mute Button
     tv_fullscreenbtn = document.getElementById("tv_fullscreenbtn");//Toggle Fullscreen
-    //tv_ccBtn = document.getElementById("tv_togglecc");//Toggle Substitles on or off
+    tv_ccBtn = document.getElementById("tv_togglecc");//Toggle Substitles on or off
 
 //event listeners
     tv_playbtn.addEventListener("click",tv_playPause,false);
@@ -43,11 +46,11 @@ function tv_initializePlayer() {
     tv_vid.addEventListener('timeupdate',tv_seektimeupdate,false);
     tv_mutebtn.addEventListener("click",tv_vidMute,false);
     tv_fullscreenbtn.addEventListener("click",tv_toggleFullScreen,false);
-//     tv_ccBtn.addEventListener('click', function() {
-//       var tv_trackMode = tv_vid.textTracks[0].mode;
-//       tv_vid.textTracks[0].mode = (tv_trackMode == 'showing') ? 'disabled' : 'showing';
-//       this.innerHTML = 'Subtitles: '.concat((trackMode == 'showing') ? 'off' : 'on');
-//    });
+    tv_ccBtn.addEventListener('click', function() {
+      var tv_trackMode = tv_vid.textTracks[0].mode;
+      tv_vid.textTracks[0].mode = (tv_trackMode == 'showing') ? 'disabled' : 'showing';
+      this.innerHTML = 'Subtitles: '.concat((tv_trackMode == 'showing') ? 'off' : 'on');
+   });
 
 }
 

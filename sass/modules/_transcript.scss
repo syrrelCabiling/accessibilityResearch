@@ -1,0 +1,25 @@
+.transcriptArea {
+	border: 5px solid black;
+	height: 50vh;
+	margin-top: 20%;
+	overflow-y: scroll;
+}
+
+#transcript {
+    font-family: garamond;
+    font-size: 14pt;
+    list-style: none;
+    border-left: 1px solid;
+    padding-left: 13px;
+    position: relative;
+}
+#transcript > li {
+    margin: 5px 0;
+    padding: 5px;
+    transition: all .8s ease;
+    // list-style-type: disc;
+   list-style: none;
+}
+.speaking {
+    background-color: #FFFF00;
+}
