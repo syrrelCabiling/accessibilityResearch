@@ -19,7 +19,44 @@ function handler(e) {
     track.src = filename + ".vtt";
     
 	video.load();
-	video.play();    
+    video.play();
+    
+}
+
+tv_vid = document.getElementById("tv_brandVideo");
+
+
+function tvScript1() {
+    var tvTranscript1 = document.getElementById("tvScript1").innerText;
+    document.getElementById("transcriptWrapper1").innerHTML = tvTranscript1; 
+    
+    tvTranscript1.addEventListener("click",tvScript1);
+  }
+
+  function tvScript2() {
+    var tvTranscript2 = document.getElementById("tvScript2").innerText;
+    document.getElementById("transcriptWrapper2").innerHTML = "TEST";
+
+    document.getElementById("transcriptWrapper2").innerHTML = " <ul id='transcript'>" + 
+                                            "<li class='speaker'> [Music]</li>" +
+                                            "<li class='speaker1'>Welcome to Wonderworld... </li>" +
+                                            "<li class='speaker1'>...where your fantasies become reality.  </li>" +
+                                            "<li class='speaker1'>You must be Bella! I know your fantasy.</li>" +
+                                            "<li class='speaker1'>To solve a case with Sherlock Holmes!</li>" +
+                                            "<li class='speaker1'>Exactly!</li>" +
+                                            "<li class='speaker1'>Uhm, let me introduce you to the people or should I say...</li>" +
+                                            "<li class='speaker1'>...The Robots of Wonderworld!</li>" +
+                                            "<li class='speaker1'>They are all computer-programmed...</li>" +
+                                            "<li class='speaker1'>...and are incapable of harming our guests</li>" +
+                                            "<li class='speaker1'>...watch</li>" +
+                                            "<li class='speaker1'>[Robot growls]</li>" +
+                                            "<li class='speaker1'>Like that monster doesn't look incapable of anything!</li>" +
+                                            "<li class='speaker1'>oh a sneak attack eh?!</li>" + 
+                                            "<li class='speaker1'>I gotta warn you you're dealing with Scrappy Doo!</li>" +
+                                            "<li class='speaker1'>That's more like it! [growls] </li>";
+
+
+    tvTranscript2.addEventListener("click",tvScript2);
 }
 
 
@@ -54,28 +91,28 @@ function tv_initializePlayer() {
 
 }
 
-//Transcript
-// var dialogueTimings = [0,3,7,12,26,33,37,45,50,61,66,74,79,84,93,100,103,108,112,116],
-//         dialogues = document.querySelectorAll('#transcript>li'),
-//         transcriptWrapper = document.querySelector('#transcriptWrapper'),
+//TV Transcript 
+var dialogueTimings1 = [0,1,2,4,7,14,17,24,28,32,35,37,40,44,48,55],
+        dialogues1 = document.querySelectorAll('#transcript1>li'),
+        transcriptWrapper1 = document.querySelector('#transcriptWrapper1'),
 
-//         previousDialogueTime = -1;   
+        previousDialogueTime1 = -1;   
 
-//      function playTranscript() {
+     function playTranscript1() {
 
-//         var currentDialogueTime = Math.max.apply(Math, dialogueTimings.filter(function(v){return v <= vid.currentTime}));
+        var currentDialogueTime1 = Math.max.apply(Math, dialogueTimings1.filter(function(v){return v <= tv_vid.currentTime}));
 
-//         if(previousDialogueTime !== currentDialogueTime) {
-//             previousDialogueTime = currentDialogueTime;
-//             var currentDialogue = dialogues[dialogueTimings.indexOf(currentDialogueTime)];
-//             transcriptWrapper.scrollTop  = currentDialogue.offsetTop - 50;  
-//             var previousDialogue = document.getElementsByClassName('speaking')[0];
-//             if(previousDialogue !== undefined)
-//                 previousDialogue.className = previousDialogue.className.replace('speaking','');
-//             currentDialogue.className +=' speaking';
-//         }
-//     }
-// ;
+        if(previousDialogueTime1 !== currentDialogueTime1) {
+            previousDialogueTime1 = currentDialogueTime1;
+            var currentDialogue1 = dialogues1[dialogueTimings1.indexOf(currentDialogueTime1)];
+           // transcriptWrapper1.scrollTop  = currentDialogue1.offsetTop - 50;  
+            var previousDialogue1 = document.getElementsByClassName('speaking')[0];
+            if(previousDialogue1 !== undefined)
+                previousDialogue1.className = previousDialogue1.className.replace('speaking','');
+            currentDialogue1.className +=' speaking';
+        }
+    }
+;
 
 
 tv_initializePlayer(); //had to delete window.onload bc it's overriding the other players.
