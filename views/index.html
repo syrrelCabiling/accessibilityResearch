@@ -28,7 +28,7 @@
 				<a class="nav-link" href="#tvshows">TV Shows</a>
 			  </li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Audios</a>
+			  <a class="nav-link" href="#audios">Audios</a>
 			</li>
 			
 		  </ul>
@@ -185,13 +185,13 @@
 
 
 			<h5>Scooby Doo</h5>
-						  Select Reader:<select name="" id="voiceList"></select>
-						  <button id="speak">
+						  Select Reader:<select name="" id="TVvoiceList"></select>
+						  <button id="TVspeak">
 							Read
 						  </button>
 						  <h6>Synopsis:</h6>
 						  
-						  <div  id="readDesc">
+						  <div  id="TVreadDesc">
 
 							<p>Brainiac Velma, jock Fred, fashionista Daphne, hippie Shaggy, and Shaggy's highstrung, talking Great Dane, Scooby-Doo, climb into their green van, the Mystery Machine, and hit the road in search of weird phenomena to solve.</p>
 
@@ -203,7 +203,7 @@
 			<div class="transcriptArea1">
 
 				<div id="transcriptWrapper1">
-					<h5>Live Transcript</h5>
+					<h5 class="text-center">Live Transcript</h5>
 					<ul id="transcript1">
 						  <li class="speaker1"> [Music] </li>
 						<li class="speaker1">That’s our cue to skidoo! </li>
@@ -233,9 +233,85 @@
 	</div>
 </div>
 
+
+
+
+<!--Audio section-->
+<div class="container  audiocont">
+	<h2>Roku Music Stream</h2>
+	<h6>Song Title: Hey Jude</h6>
+		<p>By: The Beatles</p>
+	<div class="row"  id="audios">
+
+		<div class="col-lg-6">
+			<!-- <img src="images/heyjude.jpg" alt=""> -->
+			<audio  src="images/mp3/heyjude.mp3" id="au_brandAudio" ontimeupdate="playTranscript2()" controls>
+				<source src="/images/mp3/heyjude.ogg" type="audio/ogg">
+			</audio>
+		</div>
+		
+	</div>
+	<!-- Lyrics -->
+	<div class="col-lg-4" >
+		<div class="transcriptArea2">
+			
+			<div id="transcriptWrapper2">
+				<h5 class="text-center">Lyrics</h5>
+				<ul id="transcript2">
+					<li class="speaker1"> Hey Jude </li>
+					<li class="speaker1">don't make it bad </li>
+					<li class="speaker1">Take a sad song and make it better </li>
+					<li class="speaker1">Remember to let her into your heart</li>
+					  <li class="speaker1">Then you can start to make it better</li>
+					<li class="speaker1">Hey Jude</li>
+					<li class="speaker1">don't be afraid</li>
+					<li class="speaker1">You were made to go out and get her</li>
+					<li class="speaker1">The minute you let her under your skin</li>
+					 <li class="speaker1">Then you begin to make it better</li>
+					<li class="speaker1">And anytime you feel the pain, Hey Jude, refrain</li>
+					
+					<li class="speaker1">Don't carry the world upon your shoulders</li>
+					<li class="speaker1">For well you know that it's a fool Who plays it cool</li>
+					
+					<li class="speaker1">By making his world a little colder</li>
+					<li class="speaker1">Na-na-na, na, na Na-na-na, na</li>
+					
+					<li class="speaker1">Hey Jude</li>
+					<li class="speaker1">don't let me down</li> 
+					<li class="speaker1">You have found her, now go and get her (let it out and let it in</li> 
+					<li class="speaker1">Remember to let her into your heart (hey Jude)</li> 
+					<li class="speaker1">Then you can start to make it better</li> 
+					<li class="speaker1">So let it out and let it in</li> 
+					<li class="speaker1">Hey Jude, begin</li> 
+					<li class="speaker1">You're waiting for someone to perform with</li> 
+					<li class="speaker1">And don't you know that it's just you</li> 
+					<li class="speaker1">Hey Jude, you'll do</li> 
+					<li class="speaker1">The movement you need is on your shoulder</li> 
+					<li class="speaker1">Na-na-na, na, na Na-na-na, na</li> 
+					<li class="speaker1">Hey Jude, don't make it bad</li> 
+					<li class="speaker1">Take a sad song and make it better</li> 
+					<li class="speaker1">Remember to let her under your skin</li> 
+					<li class="speaker1">Then you'll begin to make it better</li> 
+					<li class="speaker1">Better better better better better, ah!</li> 
+					<li class="speaker1">Na, na, na, na-na-na na (yeah! Yeah, yeah, yeah, yeah, yeah, yeah) Hey Jude</li> 
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
 	<script type="text/javascript" src="js/vcustom_player.js"></script>
 	<script type="text/javascript" src="js/text-to-speech.js"></script>
 	<script type="text/javascript" src="js/tv_show.js"></script>
+	<script type="text/javascript" src="js/TVtext-to-speech.js"></script>
+	<script type="text/javascript" src="js/audio.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -7,6 +7,25 @@ html {
   scroll-behavior: smooth;
   min-height: 100%; }
 
+.audiocont {
+  margin-top: 20%; }
+
+#audios {
+  padding-bottom: 10%;
+  width: 500px;
+  height: 500px;
+  background-image: url("/images/heyjude.jpg");
+  background-size: cover;
+  position: relative; }
+
+#audios audio {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  width: 100%; }
+
 .transcriptArea, .transcriptArea1, .transcriptArea2 {
   border: 5px solid black;
   height: 50vh;

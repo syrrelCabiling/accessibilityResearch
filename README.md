@@ -6,19 +6,21 @@ by Syrrel Cabiling
 #### Set up
 1. Clone the repo to anywhere (i. Documents)
    ```
-   git clone https://github.com/syrrelCabiling/ChatApp.git
+   git clone https://github.com/syrrelCabiling/accessibilityResearch.git
    ```
-   cd ChatApp
+   cd accessibilityResearch
    ```
-2. Load through localhost:3030
+2. Load through localhost:3000
    ```
 
-#### Resources
-- https://unsplash.com
-- Referrence video: https://www.youtube.com/watch?v=eSzZuBNIzpM
+#### Resources and Research Doc
+```
+https://docs.google.com/document/d/1iM3mtNjT-rS0MvwjTt7dACsgUbBf22xipmcCtQV4hwY/edit?usp=sharing
+```
+
 
 #### Footnote
 ```
-emoji only shows up before any texts 
+TTS only works in Mozilla.
  ```
 
