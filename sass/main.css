@@ -1,0 +1,104 @@
+body {
+  margin: 0 auto;
+  background-color: #ccc;
+  padding-top: 10%;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+.audiocont {
+  margin-top: 20%;
+}
+
+#audios {
+  padding-bottom: 10%;
+  width: 500px;
+  height: 500px;
+  background-image: url("/images/heyjude.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+#audios audio {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  width: 100%;
+}
+
+.transcriptArea, .transcriptArea1, .transcriptArea2 {
+  border: 5px solid black;
+  height: 50vh;
+  margin-top: 20%;
+  overflow-y: scroll;
+}
+
+#transcript, #transcript1, #transcript2 {
+  font-size: 14pt;
+  list-style: none;
+  padding-left: 10px;
+  position: relative;
+}
+
+#transcript > li, #transcript1 > li, #transcript2 > li {
+  margin: 5px 0;
+  padding: 5px;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  list-style: none;
+}
+
+.speaking {
+  background-color: #FFFF00;
+}
+
+#video_player {
+  display: table;
+  line-height: 0;
+  font-size: 0;
+  background: #000;
+}
+
+#video_player video,
+#video_player figcaption {
+  display: table-cell;
+  vertical-align: top;
+}
+
+#video_player figcaption {
+  width: 25%;
+}
+
+#video_player figcaption a {
+  display: block;
+  opacity: .5;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
+}
+
+#video_player figcaption a img,
+figure video {
+  width: 100%;
+  height: auto;
+}
+
+#video_player figcaption a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  #video_player video,
+  #video_player figcaption {
+    display: table-row;
+  }
+  #video_player figcaption a {
+    display: inline-block;
+    width: 33.33%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

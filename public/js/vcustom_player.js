@@ -1,5 +1,5 @@
 //variables
-var m_vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, fullscreenbtn;
+var vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, fullscreenbtn;
 function initializePlayer() {
     vid = document.getElementById("brandVideo");
     playbtn = document.getElementById("playpausebtn");//Play Button
