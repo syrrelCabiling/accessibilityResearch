@@ -13,8 +13,8 @@
 
 <body>
 	<!--Navigation-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-		<a class="navbar-brand mr-5" href="#">Roku Stream - Beta</a>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 fixed-top">
+		<a class="navbar-brand mr-5" href="/">Roku Stream - Beta</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -22,7 +22,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		  <ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-			  <a class="nav-link" href="#">Movies <span class="sr-only">(current)</span></a>
+			  <a class="nav-link" href="#movies">Movies <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#tvshows">TV Shows</a>
@@ -41,7 +41,7 @@
 <div class="container">
 	<div class="row mx-auto text-center"  id="about">
 		<div class="col-lg-8 col-md-8 col-sm-12">
-			<h2>Roku Movie Stream</h2>
+			<h2 id="movies">Roku Movie Stream</h2>
 				  <div id="videoPanel">
 				   <video id="brandVideo" ontimeupdate="playTranscript()"  width="100%" poster="images/video-placeholder.png" crossorigin="anonymous"> 
 					   <source src="images/films/rear_window.mp4" type="video/mp4">
@@ -142,17 +142,18 @@
 		<div class="col">
 			<h2>Roku TV Show Stream</h2>
 			<figure id="video_player">
-				<video id="tv_brandVideo" ontimeupdate="playTranscript()" poster="images/sc_cover1.jpeg" crossorigin="anonymous">
+				<video id="tv_brandVideo" ontimeupdate="playTranscript1()" poster="images/sc_cover1.jpeg" crossorigin="anonymous">
 					<source src="images/films/key_ep.mp4" type="video/mp4">
 					<source src="images/films/key_ep.webm" type="video/webm">
 						<track label="English" kind="subtitles" srclang="en" src="images/films/key.vtt" default id="subs2">
 				</video>
 				<figcaption>
 						
-					<a href="images/films/key_ep.mp4"><img src="images/sc_cover1.jpeg" alt="Nambia Timelapse 1"> <track label="English" kind="subtitles" srclang="en" src="" default id="subs2"> 
+					<a href="images/films/key_ep.mp4" onclick="tvScript1()" id="tvScript1"><img src="images/sc_cover1.jpeg" alt="Nambia Timelapse 1"> 
+						<track label="English" kind="subtitles" srclang="en" src="" default id="subs2"> 
 					</a>
 					
-					<a href="images/films/wonderland_ep.mp4"><img src="images/sc_cover2.jpeg" alt="Nambia Timelapse 2">
+					<a href="images/films/wonderland_ep.mp4" onclick="tvScript2()" id="tvScript2"><img src="images/sc_cover2.jpeg" alt="Nambia Timelapse 2">
 						<!-- For the second video, I'm fetching the source from tv_show.js line 19 -->
 						<track label="English" kind="subtitles" srclang="en" src="" default id="subs2"> 
 					</a>
@@ -199,36 +200,35 @@
 		</div>
 
 		<div class="col-lg-4">
-			<div class="transcriptArea">
+			<div class="transcriptArea1">
 
-				<div id="transcriptWrapper">
+				<div id="transcriptWrapper1">
 					<h5>Live Transcript</h5>
-					<ul id="transcript">
-						  <li class="speaker1"> This is the scene of a crime.</li>
-						<li class="speaker1">A crime of passion filmed in a way you have never seen before </li>
-						<li class="speaker1">and there’s no one else would dare attempt but the Screams Master of Suspense, </li>
-						<li class="speaker1">The Producer Director who shocked the world with Psycho.</li>
-						  <li class="speaker1">This is the apartment of a man named Jeffries, a news photographer who’s beat used to be the world.</li>
-						<li class="speaker1">Right now, his world has shrunk down to the size of this window.</li>
-						<li class="speaker1">He's been watching the people across the way nobody seems to pull their blinds during a hot spell like this. </li>
-						<li class="speaker1">He knows a lot about them by now. Too much perhaps.</li>
-						<li class="speaker1">For instance down there on the second floor the woman pacing about he calls her miss lonely hearts, so lonely that even death seems like a friend.</li>
-						 <li class="speaker1">These are the newlyweds on a honeymoon no one will ever forget. </li>
-						<li class="speaker1">He calls her miss hearing aid, an artist of a very odd and strange art.</li>
+					<ul id="transcript1">
+						  <li class="speaker1"> [Music] </li>
+						<li class="speaker1">That’s our cue to skidoo! </li>
+						<li class="speaker1">[Door closes loudly] </li>
+						<li class="speaker1">Quick Scooby! Put this key in a safe place!</li>
+						  <li class="speaker1">[Scooby barks]</li>
+						<li class="speaker1">Oh no! Another door!</li>
+						<li class="speaker1">[Villain's name] wont be able to open the door now!</li>
+						<li class="speaker1">Oh no! It opened the other way!</li>
+						<li class="speaker1">Quick Scoob! Give me the key!</li>
+						 <li class="speaker1">[Scooby points at the key outside]</li>
+						<li class="speaker1">You threw it out the window?!</li>
 						<li class="speaker1">The songwriter who plays the same melody over and over again</li> 
-						<li class="speaker1">A genius... or insane.</li>
-						<li class="speaker1">This is the traveling salesman and his invalued wife, out of their argument comes a weird kind of love.</li>
+						<li class="speaker1">[Villain laughs]</li>
+						<li class="speaker1">TWe gotta get that key and get out of here!</li>
 						
-						<li class="speaker1">Miss Torso, the body beautiful, that is viewed from a safe distance.</li>
-						<li class="speaker1">Those are just a few of my neighbours.</li>
+						<li class="speaker1">Got it!</li>
+						<li class="speaker1">Now we can get out if here! </li>
 						
-						<li class="speaker1">First I watch them just to kill time but then I couldn't take my eyes off em just as you wouldn't be able to,</li> 
-						<li class="speaker1">and you won't be able to take your eyes off the glowing beauty of Grace Kelly </li> 
-						<li class="speaker1">who shares the heart and curiosity of James Stewart.</li>
-						<li class="speaker1">in this story of a romance shadowed by the terror of a horrifying secret.</li>
+						<li class="speaker1">[Villain screams]</li> 
 				</div>
 			</div>
 		</div>
+
+		<!-- <div class="transcriptArea2"></div> -->
 		  </div>
 	</div>
 </div>
