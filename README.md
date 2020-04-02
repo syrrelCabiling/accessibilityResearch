@@ -3,6 +3,13 @@ Basic Interface with multimedia controls to ensure that it is accessible for eve
 
 by Syrrel Cabiling
 
+# Added Accessibility
+- Video Subtitles (toggle on/off)
+- Live Transcripts
+- Text-To-Speech Reader (Mozilla only)
+- Keyboard
+
+
 #### Set up
 1. Clone the repo to anywhere (i. Documents)
    ```
