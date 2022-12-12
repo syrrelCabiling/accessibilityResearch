@@ -4,7 +4,7 @@
   "description": "Accessibility Research for Audio and Video players",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "handlebars": "^4.7.3",
     "hbs": "^4.1.0"
   },
